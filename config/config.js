@@ -2,8 +2,8 @@ module.exports = {
 	public_dir:'/Users/ariza/Documents/codigo/skmo-api/public',
   app: {
     host: '0.0.0.0',
-    http: 3000,
-    https: 3443
+    http: process.env.PORT||3000,
+    https: process.env.PORT||3443
   },
   rest:{
     path:'/ws3/',
