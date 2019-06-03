@@ -6,7 +6,7 @@ module.exports = {
     https: process.env.PORT||3443
   },
   rest:{
-    path:'/ws3/',
+    path:'/ws3',
     max_callers: 1000
   },
   logger: {
