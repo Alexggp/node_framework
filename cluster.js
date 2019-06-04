@@ -1,2 +1,2 @@
-var server = require('./lib/backend');
+var server = require('./lib/app');
 server.startInCluster();

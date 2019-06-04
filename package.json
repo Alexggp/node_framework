@@ -1,8 +1,8 @@
 {
   "requires": true,
   "lockfileVersion": 1,
-  "scripts":{
-  	"start": "node single.js"
+  "scripts": {
+    "start": "node single.js"
   },
   "dependencies": {
     "accepts": {
@@ -164,6 +164,7 @@
       "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz",
       "version": "1.0.2"
     },
+    "cors": "^2.8.5",
     "cryptiles": {
       "dependencies": {
         "boom": {
