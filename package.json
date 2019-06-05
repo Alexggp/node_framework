@@ -763,6 +763,8 @@
       "resolved": "https://registry.npmjs.org/stringstream/-/stringstream-0.0.5.tgz",
       "version": "0.0.5"
     },
+    "swagger-jsdoc": "^3.2.9",
+    "swagger-ui-express": "^4.0.5",
     "tough-cookie": {
       "integrity": "sha1-C2GKVWW23qkL80JdBNVe3EdadWE=",
       "requires": {
