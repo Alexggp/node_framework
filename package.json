@@ -831,5 +831,8 @@
       "resolved": "https://registry.npmjs.org/x-xss-protection/-/x-xss-protection-1.0.0.tgz",
       "version": "1.0.0"
     }
+  },
+  "devDependencies": {
+    "prettier": "^1.17.1"
   }
 }
