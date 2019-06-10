@@ -21,4 +21,4 @@ Features:
 
 * Swagger
 * CustomResponses
-* 
+* Linting with ESLint and pre-commit hook

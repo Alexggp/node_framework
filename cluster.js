@@ -1,2 +1,3 @@
-var server = require('./lib/app');
+const server = require('./lib/app');
+
 server.startInCluster();
