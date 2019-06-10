@@ -2,7 +2,7 @@ node-serverPrototype
 ====================
 
 Prototype node js server (rest server)
-This project is a prototype made ​​in node js server based on routes and services.
+This project is a prototype made ​​in node js server based on routes, controllers and services.
 The purpose of this server is to show how layers can organize routes ,
 services, database connectors , validation schemes , and logger configuration 
 files within a common project.
@@ -16,25 +16,9 @@ or you may jump by :
 single.js node in stand alone mode or in cluster ,
 node cluster.js
 
-This server works with local database mongodb configured on port 27017 (replicaset 3 nodes).
-See the config file (lib/config.js) 
-E2e test folder , shows how to implement a POST call to the server.
-Also can be used to generate the post postman call.
-The configuration file used to define the http and https ports server 
-operation as well as the maximum number of parallel processes that can 
-be used by each call to the post method.
 
-Example:
-http://localhost:3000/ws3/translate.post or https://localhost:3443/ws3/translate.port
-Method post, x-www-form-urlencoded,
-parameters: from es
-			to en
-			message hola mundo!
-			
-you must obtain:
-{
-    "source": "hola mundo!",
-    "target": "hello world!"
-}
+Features:
 
-This api (translator.route) use google translator facility
+* Swagger
+* CustomResponses
+* 
