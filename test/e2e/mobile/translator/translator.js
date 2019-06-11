@@ -1,32 +1,31 @@
-var request = require('request');
-var server = require('../../../../lib/backend');
-var should = require('should');
-var config = require('../../../../config/config');
+const request = require('request');
+const should = require('should');
+const server = require('../../../../lib/backend');
+const config = require('../../../../config/config');
 
-var url = 'http://localhost:' + config.app.http + '/ws3/';
-var timeout = 10000;
+const url = `http://localhost:${config.app.http}/ws3/`;
+const timeout = 10000;
 
-describe('#E2E translator, server start  ', function () {
+describe('#E2E translator, server start  ', () => {
   before(function (done) {
     this.timeout(timeout);
-    if(!server.active()) server.start();
-    setTimeout(function () {
+    if (!server.active()) server.start();
+    setTimeout(() => {
       done();
     }, 5000);
   });
   it('#translator display all greetings', function (done) {
     this.timeout(timeout);
-    var register = {"from":"en","to":"es","message":"hello world!"};
-    var options = {
-      uri:url+'translate.route',
-      json:register
+    const register = { from: 'en', to: 'es', message: 'hello world!' };
+    const options = {
+      uri: `${url}translate.route`,
+      json: register,
     };
-    request.post(options, function (err, result) {
+    request.post(options, (err, result) => {
       should.not.exists(err);
       if (err) {
         done(err);
-      }
-      else {
+      } else {
         should.exists(result);
         done();
       }
@@ -35,17 +34,16 @@ describe('#E2E translator, server start  ', function () {
 
   it('#translator  error, to field is mandatory !', function (done) {
     this.timeout(timeout);
-    var register = {"from":"en","message":"hello world!"};
-    var options = {
-      uri:url+'translate.route',
-      json:register
+    const register = { from: 'en', message: 'hello world!' };
+    const options = {
+      uri: `${url}translate.route`,
+      json: register,
     };
-    request.post(options, function (err, result) {
+    request.post(options, (err, result) => {
       should.not.exists(err);
       if (err) {
         done(err);
-      }
-      else {
+      } else {
         should.exists(result.body.valid);
         result.body.valid.should.be.equal(false);
         done();
@@ -53,4 +51,3 @@ describe('#E2E translator, server start  ', function () {
     });
   });
 });
-

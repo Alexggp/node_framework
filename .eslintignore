@@ -3,3 +3,8 @@
 # Ignored files  and Directories:
 lib/utils/typeValidator.js
 lib/utils/validator.js
+config/
+test/
+package*
+pre-commit
+README.md
