@@ -4,7 +4,6 @@
 lib/utils/type-validator.js
 lib/utils/validator.js
 config/
-test/
 package*
 pre-commit
 README.md

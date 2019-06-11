@@ -26,10 +26,12 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
-#idea files
+#editor files
 *.iml
+.vscode
 .idea
 tar
 #public assets
 public
 .DS_Store
+
