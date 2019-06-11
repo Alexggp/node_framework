@@ -1,4 +1,13 @@
 {
+  "name": "node_framework",
+  "versuib": "1.0.0",
+  "author":"Alejandro García-Gasco Pérez",
+  "license":"Public Domain",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Alexggp/node_framework"
+  },
+  "main":"single.js",
   "requires": true,
   "lockfileVersion": 1,
   "scripts": {
