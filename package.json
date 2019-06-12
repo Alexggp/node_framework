@@ -1,19 +1,25 @@
 {
   "name": "node_framework",
   "versuib": "1.0.0",
-  "author":"Alejandro García-Gasco Pérez",
-  "license":"Public Domain",
+  "author": "Alejandro García-Gasco Pérez",
+  "license": "Public Domain",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Alexggp/node_framework"
+    "type": "git",
+    "url": "https://github.com/Alexggp/node_framework"
   },
-  "main":"single.js",
+  "main": "single.js",
   "requires": true,
   "lockfileVersion": 1,
   "scripts": {
     "start": "node single.js",
-    "lint": "npx eslint ./lib/** --fix",
-    "test": "node_modules/.bin/mocha --recursive"
+    "lint": "eslint ./lib/** --fix",
+    "test": "mocha --recursive"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "eslint ./lib/** --fix",
+      "pre-push": "npm test"
+    }
   },
   "dependencies": {
     "async": "^3.0.1",
@@ -37,6 +43,7 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.3",
+    "husky": "^2.4.1",
     "mocha": "^6.1.4",
     "should": "^13.2.3"
   }
