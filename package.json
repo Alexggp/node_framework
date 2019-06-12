@@ -35,6 +35,7 @@
     "mysql": "^2.17.1",
     "pg": "^7.11.0",
     "redis": "^2.8.0",
+    "request": "^2.88.0",
     "stack-trace": "0.0.10",
     "swagger-jsdoc": "^3.2.9",
     "swagger-ui-express": "^4.0.6"
