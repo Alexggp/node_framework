@@ -12,12 +12,12 @@
   "lockfileVersion": 1,
   "scripts": {
     "start": "node single.js",
-    "lint": "eslint ./lib/** --fix",
+    "lint": "eslint ./**/*.js --fix",
     "test": "mocha --recursive"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "eslint ./lib/** --fix",
+      "pre-commit": "eslint ./**/*.js --fix",
       "pre-push": "npm test"
     }
   },
